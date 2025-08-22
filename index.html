@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helsi Welsi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        
+        img {
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        
+        /* Зображення для десктопу (за замовчуванням) */
+        .desktop-image {
+            display: block;
+        }
+        
+        .mobile-image {
+            display: none;
+        }
+        
+        /* Медіа-запит для мобільних пристроїв */
+        @media (max-width: 768px) {
+            .desktop-image {
+                display: none;
+            }
+            
+            .mobile-image {
+                display: block;
+            }
+        }
+        
+        /* Додатково для дуже маленьких екранів */
+        @media (max-width: 480px) {
+            img {
+                max-width: 95vw;
+                max-height: 95vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Зображення для десктопу -->
+    <img src="helsi-welsi-desktop.svg" alt="Helsi Welsi" class="desktop-image">
+    
+    <!-- Зображення для мобільних -->
+    <img src="helsi-welsi-mobile.svg" alt="Helsi Welsi" class="mobile-image">
+    
+    <!-- Якщо використовуєш SVG, замініть на: -->
+    <!-- <img src="helsi-welsi-logo.svg" alt="Helsi Welsi"> -->
+</body>
+</html>
